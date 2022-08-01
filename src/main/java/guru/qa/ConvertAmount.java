@@ -9,7 +9,7 @@ public class ConvertAmount {
     static double[] roublesArray;
     static int n;
     static int i;
-    static int ROUBLES_PER_FRANK;
+    static int ROUB_PER_FRAN;
 
 
     static void first() {
@@ -18,8 +18,8 @@ public class ConvertAmount {
 
         do {
             System.out.print("Введите корректный курс покупки швейцарского франка за рубли: ");
-            ROUBLES_PER_FRANK = input.nextInt();
-        } while (ROUBLES_PER_FRANK <= 0);
+            ROUB_PER_FRAN = input.nextInt();
+        } while (ROUB_PER_FRAN <= 0);
 
         instruct();
 
@@ -45,7 +45,7 @@ public class ConvertAmount {
     public static void instruct() {
         System.out.println("Эта программа конвертирует сумму денег "
                 + "из швейцарских франков в российские рубли.");
-        System.out.println("Курс покупки равен " + ROUBLES_PER_FRANK + "рубля.\n");
+        System.out.println("Курс покупки равен " + ROUB_PER_FRAN + "рубля.\n");
     }
 
     public static double[] find_rubles(int[] frankArray, int n) {
@@ -53,7 +53,7 @@ public class ConvertAmount {
         int i;
 
         for (i = 0; i < n; i++) {
-            rublessArray[i] = ROUBLES_PER_FRANK * frankArray[i];
+            rublessArray[i] = ROUB_PER_FRAN * frankArray[i];
         }
 
         return rublessArray;
